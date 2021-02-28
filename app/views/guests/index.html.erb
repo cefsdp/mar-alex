@@ -1,0 +1,18 @@
+<ul>
+<% @guests.each do |guest| %>
+  <li>
+    <div class="name">
+        <%= guest.first_name %>, <%= guest.last_name %>
+    </div>
+    <div class="contact">
+        <div><%= guest.email %></div>
+        <div><%= guest.phone %></div>
+    </div>
+    <div class="address">
+        <div><%= guest.address %></div>
+        <div><%= guest.postal_code %> <%= guest.city %></div>
+        <div><%= guest.country.name %></div>
+    </div>
+  </li>
+<% end %>
+</ul>

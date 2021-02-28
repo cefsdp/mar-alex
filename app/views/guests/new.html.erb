@@ -1,0 +1,22 @@
+<div class="container pt-4">
+  <%= simple_form_for(@guest) do |f| %>
+    <div></div>
+    <div>
+        <%= f.input :first_name, placeholder: 'Charles-Emmanuel' %>
+        <%= f.input :last_name, placeholder: 'Foussé Savoye de Puineuf' %>
+    </div>
+    <div>
+        <%= f.input :email, placeholder: 'test@example.com' %>
+        <%= f.input :phone, placeholder: '+33 06 99 99 99 99' %>
+    </div>
+    <div>
+        <div><%= f.input :address, placeholder: '48 rue de varenne' %></div>
+        <div>
+            <%= f.input :postal_code, placeholder: '75007' %>
+            <%= f.input :city, placeholder: 'Paris' %>
+        </div>
+        <div><%= f.association :country, input_html: { class: "beautiful-dropdown" }, include_hidden: false %></div>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>
